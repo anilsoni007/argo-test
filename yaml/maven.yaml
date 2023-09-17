@@ -14,18 +14,18 @@ spec:
   spec:
    containers:
     - name: mycon
-      image: asoni007/nodeslim:2
+      image: asoni007/maven-web-application:1
       ports:
        - containerPort: 8080
       readinessProbe:
        httpGet:
-        path: /
+        path: /maven-web-application
         port: 8080
        initialDelaySeconds: 15
        periodSeconds: 15
       livenessProbe:
        httpGet:
-        path: /
+        path: /maven-web-application
         port: 8080
        initialDelaySeconds: 15
        periodSeconds: 15
